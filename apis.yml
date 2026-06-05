@@ -1,4 +1,6 @@
 
 common:
+tags:
+  - Fortune 500
   - type: LinkedIn
     url: https://www.linkedin.com/company/spartannash
