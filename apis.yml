@@ -1,5 +1,7 @@
 
 common:
+  - url: https://www.spartannash.com/feed/
+    type: Blog
 tags:
   - Fortune 500
   - type: LinkedIn
