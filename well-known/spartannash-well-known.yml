@@ -1,0 +1,56 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Live unauthenticated GET probes of /.well-known/* on the SpartanNash corporate
+  host and the SpartanNash-operated e-commerce host, 2026-08-26. Every path
+  missed; no pointer is emitted because SpartanNash serves no .well-known
+  document.
+note: >-
+  RECORDED ABSENCE, NOT A PRESENCE. All probed paths returned 404 (corporate
+  host, WordPress catch-all 404 page) or 403 (e-commerce host, edge WAF blocking
+  the entire /.well-known/ prefix). No WellKnown or SecurityTxt pointer is wired
+  into apis.yml. A sibling probe of www.familyfare.com was discarded as a soft-200
+  false positive: that host answers HTTP 200 with the same SPA/marketing HTML
+  shell for every /.well-known/* path including /openapi.json, so a 200 there is
+  not a document.
+hosts:
+  - host: www.spartannash.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.shopfamilyfare.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+      - path: /.well-known/ucp
+        status: 403
+        file: null
