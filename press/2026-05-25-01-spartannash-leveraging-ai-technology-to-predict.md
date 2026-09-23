@@ -1,7 +1,9 @@
 ---
 title: SpartanNash Leveraging AI Technology to Predict ...
 url: https://www.prnewswire.com/news-releases/spartannash-leveraging-ai-technology-to-predict-shopper-demand-decrease-waste-301918073.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"SpartanNash" press release artificial intelligence'
 position: 1
 source: serpapi-google
